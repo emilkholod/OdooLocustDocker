@@ -1,9 +1,9 @@
 # -*- coding:utf-8 -*-
 from os import environ
 from OdooLocust import OdooLocust
-from odoo_task_set import OdooTaskSet
+from OdooLocust import OdooTaskSet
 
-class Manager(OdooLocust):
+class Manager(OdooLocust.OdooLocust):
     """
     Manager of the tasks
 
@@ -23,4 +23,4 @@ class Manager(OdooLocust):
     password = environ["ODOO_PASSWORD"]
     port = int( environ["ODOO_PORT"] )
 
-    task_set = OdooTaskSet
+    task_set = OdooTaskSet.OdooGenericTaskSet

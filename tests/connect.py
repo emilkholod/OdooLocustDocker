@@ -2,9 +2,9 @@
 
 # This script gives you a basic connection to the odoo server with the provided credentials
 from os import environ
-import openerplib
+import odoolib
 
-con = openerplib.get_connection(
+con = odoolib.get_connection(
     hostname=environ["ODOO_HOST"],
     database=environ["ODOO_DATABASE"],
     login=environ["ODOO_LOGIN"],

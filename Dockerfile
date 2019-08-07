@@ -1,13 +1,18 @@
-FROM python:2.7
+FROM python:3.6.9-buster
 
-RUN git clone https://github.com/nseinlet/OdooLocust.git /home/ && cd /home/ && \
-        pip install -r requirements.txt && \
-        python setup.py build && \
-        python setup.py install
+RUN apt-get update && apt-get install -y --no-install-recommends git
 
-ADD ./tests/ /home/OdooLocust/tests/
+WORKDIR /home
+RUN git clone https://github.com/niulinlnc/OdooLocust.git /home/odoo
 
-WORKDIR /home/OdooLocust/tests/
+WORKDIR /home/odoo
+RUN pip install -r requirements.txt && \
+    python setup.py build && \
+    python setup.py install
+
+ADD ./tests/ /home/odoo/OdooLocust/tests/
+
+WORKDIR /home/odoo/OdooLocust/tests/
 
 EXPOSE 8089
 
