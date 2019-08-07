@@ -5,15 +5,7 @@ This is a repo based on https://github.com/niulinlnc/OdooLocust
 >
 docker：
 >
-docker run -d \
-        -p 8089:8089 \
-        -e ODOO_LOGIN=admin \
-        -e ODOO_PASSWORD=admin \
-        -e ODOO_HOST=odoo服务器ip \
-        -e ODOO_DATABASE="数据库名" \
-        -e ODOO_PORT=8069 \
-        --name odoolocust \
-        -t registry.cn-hangzhou.aliyuncs.com/ongood/odoolocust:1.0
+docker run -d -p 8089:8089 -e ODOO_LOGIN=admin -e ODOO_PASSWORD=admin -e ODOO_HOST=odoo服务器ip -e ODOO_DATABASE="数据库名" -e ODOO_PORT=8069 --name odoolocust -t registry.cn-hangzhou.aliyuncs.com/ongood/odoolocust:1.0
 
 # How to use it
 Params:
