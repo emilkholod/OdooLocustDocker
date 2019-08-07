@@ -7,6 +7,7 @@ docker：
 >
 获取docker image：
 >docker pull registry.cn-hangzhou.aliyuncs.com/ongood/odoolocust:1.0
+>
 运行：
 >
 docker run -d -p 8089:8089 -e ODOO_LOGIN=用户名 -e ODOO_PASSWORD=登录密码 -e ODOO_HOST=odoo服务器ip -e ODOO_DATABASE="数据库名" -e ODOO_PORT=odoo服务器端口（如：8069） --name odoolocust -t registry.cn-hangzhou.aliyuncs.com/ongood/odoolocust:1.0
