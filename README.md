@@ -1,5 +1,6 @@
 # What's this
 This is a repo based on https://github.com/niulinlnc/OdooLocust
+>
 注：支持odoo12测试
 
 # How to use it
