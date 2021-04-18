@@ -3,6 +3,7 @@ from os import environ
 from OdooLocust import OdooLocust
 from OdooLocust import OdooTaskSet
 
+
 class Manager(OdooLocust.OdooLocust):
     """
     Manager of the tasks
@@ -21,6 +22,6 @@ class Manager(OdooLocust.OdooLocust):
     database = environ["ODOO_DATABASE"]
     login = environ["ODOO_LOGIN"]
     password = environ["ODOO_PASSWORD"]
-    port = int( environ["ODOO_PORT"] )
+    port = int(environ["ODOO_PORT"])
 
-    task_set = OdooTaskSet.OdooGenericTaskSet
+    tasks = [OdooTaskSet.OdooGenericTaskSet]

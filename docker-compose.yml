@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+  odoo-locust:
+    build: .
+    network_mode: "host"
+    environment:
+      - ODOO_LOGIN=admin
+      - ODOO_PASSWORD=admin
+      - ODOO_HOST=localhost
+      - ODOO_DATABASE=demo
+      - ODOO_PORT=8069
+    ports:
+      - 8089:8089
